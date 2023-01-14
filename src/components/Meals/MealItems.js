@@ -17,8 +17,8 @@ const MealItems = (props) => {
 
   return (
     <li className="flex flex-col md:flex-row justify-between border-b-2 border-slate-500">
-      <div className="flex flex-col md:flex-row">
-        <div className="mt-2 md:w-20 md:h-20 md:my-auto">{props.picture}</div>
+      <div className="flex flex-row">
+        <div className="mt-2 w-1/2 md:w-20 md:h-20 py-4">{props.picture}</div>
         <div className="flex flex-col justify-between m-4">
           <div className="text-base md:text-xl font-bold">{props.name}</div>
           <div className="text-base md:text-xl">{props.description}</div>

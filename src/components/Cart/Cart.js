@@ -36,9 +36,9 @@ const Cart = (props) => {
   return (
     <Modal onClose={props.onClose}>
       <div className='text-center font-bold text-2xl mb-3'> Your Order</div>
-      <div className='flex flex-col'>{cartItems}</div>
+      <div className='flex flex-col h-60 overflow-y-auto'>{cartItems}</div>
         <div className="flex justify-between items-center font-bold text-xl mx-2">
-        <span>Total Amount</span>
+        <span className='mt-4'>Total Amount</span>
         <div>&#163; {totalAmount}</div>
       </div>
       <div className="flex flex-row justify-between p-2">
