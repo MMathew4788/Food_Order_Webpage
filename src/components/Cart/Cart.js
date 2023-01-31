@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import Modal from "../UI/Modal";
 import CartItem from './CartItem';
 import CartContext from '../../store/cart-context';
-
+import OrderPlacedModal from './OrderPlacedModal';
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -33,6 +33,7 @@ const Cart = (props) => {
     </ul>
   );
 
+  const [showOrderPlacedModal,setshowOrderPlacedModal] = useState(false)
   return (
     <Modal onClose={props.onClose}>
       <div className='text-center font-bold text-2xl mb-3'> Your Order</div>
@@ -44,8 +45,9 @@ const Cart = (props) => {
       <div className="flex flex-row justify-between p-2">
         <button onClick={props.onClose} 
         className="bg-white hover:bg-[#4d1601] text-[#4d1601] border border-[#8a2b06] hover:text-white p-3 rounded-xl cursor-pointer">Close</button>
-        {hasItems && <button className="bg-[#8a2b06] hover:bg-[#4d1601] text-white px-10 p-3 rounded-xl cursor-pointer">Order</button>}
+        {hasItems && <button onClick={()=>setshowOrderPlacedModal(true)} className="bg-[#8a2b06] hover:bg-[#4d1601] text-white px-10 p-3 rounded-xl cursor-pointer">Order</button>}
       </div>
+      <OrderPlacedModal show={showOrderPlacedModal}/>
       </Modal>
     );
 };
