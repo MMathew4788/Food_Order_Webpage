@@ -9,11 +9,10 @@ const Checkout = (props) => {
       props.onConfirm({
         name: document.getElementById("name").value,
         street: document.getElementById("street").value,
-        city: document.getElementById("postal").value,
-        postalCode: document.getElementById("name").value
+        city: document.getElementById("city").value,
+        postalCode: document.getElementById("postal").value
       });
     };
-
 
     const [showOrderPlaced,setshowOrderPlaced] = useState(false);
     

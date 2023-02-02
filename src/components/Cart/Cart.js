@@ -31,6 +31,7 @@ const Cart = (props) => {
         orderedItems: cartCtx.items
       })
     });
+    cartCtx.clearCart();
   };
 
   const cartItems = (
