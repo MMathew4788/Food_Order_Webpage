@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { uiAction } from "../../store/ui-slice";
 import CartIcon from "../Cart/CartIcon";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
@@ -30,13 +32,19 @@ const HeaderCartButton = (props) => {
     };
   }, [items]);
 
+  const dispatch = useDispatch();
+
+  const openCartHandler=()=>{
+    dispatch(uiAction.toggle());
+  }
+
   return (
-    <button className={btnClasses} onClick={props.onClick}>
+    <button className={btnClasses} onClick={openCartHandler}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
       <span>Your Cart</span>
-      <span className={classes.badge}>{numberOfCartItems}</span>
+      <span className="bg-[#b94517] py-1 px-4 rounded-xl ml-4 font-bold">{numberOfCartItems}</span>
     </button>
   );
 };
