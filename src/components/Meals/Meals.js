@@ -1,5 +1,7 @@
-import { Fragment } from "react";
-import AvailableMeals from "./AvailableMeals";
+import { Fragment} from "react";
+import {Routes, Route, Link} from "react-router-dom";
+import AvailableMealsChinese from "./AvailableMealsChinese";
+import AvailableMealsIndian from "./AvailableMealsIndian";
 
 const Meals = () => {
   return (
@@ -13,7 +15,19 @@ const Meals = () => {
           at your home
         </p>
       </section>
-      <AvailableMeals/>
+      <div className="text-center space-x-2 my-2">
+      <Link to="/"><button className="bg-[#8a2b06] hover:bg-[#4d1601] text-white px-10 p-3 rounded-xl cursor-pointer"
+      >Indian</button>
+      </Link>
+      <Link to='/chinese'>
+      <button className="bg-[#8a2b06] hover:bg-[#4d1601] text-white px-10 p-3 rounded-xl cursor-pointer"
+      >Chinese</button>
+      </Link>
+      </div>
+      <Routes>
+      <Route path="/" element={<AvailableMealsIndian/>} />
+      <Route path="/chinese" element={<AvailableMealsChinese/>} />
+      </Routes>
     </Fragment>
   );
 };
