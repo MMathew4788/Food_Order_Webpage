@@ -1,7 +1,8 @@
-import { Fragment} from "react";
+import { Fragment, lazy, Suspense} from "react";
 import {Routes, Route, Link} from "react-router-dom";
-import AvailableMealsChinese from "./AvailableMealsChinese";
 import AvailableMealsIndian from "./AvailableMealsIndian";
+
+const AvailableMealsChinese = lazy(()=>import('./AvailableMealsChinese'))
 
 const Meals = () => {
   return (
@@ -26,7 +27,7 @@ const Meals = () => {
       </div>
       <Routes>
       <Route path="/" element={<AvailableMealsIndian/>} />
-      <Route path="/chinese" element={<AvailableMealsChinese/>} />
+      <Route path="/chinese" element={<Suspense fallback={<p className="text-center">Loading...</p>}><AvailableMealsChinese/></Suspense>} />
       </Routes>
     </Fragment>
   );
