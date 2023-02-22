@@ -1,9 +1,9 @@
 import Card from "../UI/Card";
 import MealItems from "./MealItems";
-import PaneerTikkaMasala from "../../assets/PaneerTikkaMasala.jpeg";
-import ButterChicken from "../../assets/ButterChicken.jpeg";
-import Biryani from "../../assets/Biryani.jpeg";
-import GulabJamun from "../../assets/GulabJamun.jpeg";
+import PaneerTikkaMasala from "../../assets/PaneerTikkaMasala.jpg";
+import ButterChicken from "../../assets/ButterChicken.jpg";
+import Biryani from "../../assets/Biryani.jpg";
+import GulabJamun from "../../assets/GulabJamun.jpg";
 
 
 const DUMMY_MEALS = [

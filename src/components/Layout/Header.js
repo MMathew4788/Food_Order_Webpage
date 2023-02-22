@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import backgroundimage from "../../assets/background.jpeg";
+import backgroundimage from "../../assets/background.webp";
 import HeaderCartButton from "./HeaderCartButton";
 
 const Header = (props) => {
