@@ -1,6 +1,7 @@
 import { Fragment, lazy, Suspense} from "react";
 import {Routes, Route, Link} from "react-router-dom";
 import AvailableMealsIndian from "./AvailableMealsIndian";
+import Loading from "../../assets/Loading.gif"
 
 const AvailableMealsChinese = lazy(()=>import('./AvailableMealsChinese'))
 
@@ -27,7 +28,7 @@ const Meals = () => {
       </div>
       <Routes>
       <Route path="/" element={<AvailableMealsIndian/>} />
-      <Route path="/chinese" element={<Suspense fallback={<p className="text-center">Loading...</p>}><AvailableMealsChinese/></Suspense>} />
+      <Route path="/chinese" element={<Suspense fallback={<div className="flex justify-center"><img src={Loading} alt='Loading'/></div>}><AvailableMealsChinese/></Suspense>} />
       </Routes>
     </Fragment>
   );
