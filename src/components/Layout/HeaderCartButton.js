@@ -40,10 +40,10 @@ const HeaderCartButton = (props) => {
 
   return (
     <button className={btnClasses} onClick={openCartHandler}>
-      <span className={classes.icon}>
+      <div className={classes.icon}>
         <CartIcon />
-      </span>
-      <span>Your Cart</span>
+      </div>
+      <div className="text-2xl">Your Cart</div>
       <span className="bg-[#b94517] py-1 px-4 rounded-xl ml-4 font-bold">{numberOfCartItems}</span>
     </button>
   );
