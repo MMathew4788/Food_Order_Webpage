@@ -37,10 +37,10 @@ const Checkout = (props) => {
         </div>
         <div className="flex flex-row justify-between p-2">
           <button type='button' onClick={props.onCancel}
-            className="bg-white hover:bg-[#4d1601] text-[#4d1601] border border-[#8a2b06] hover:text-white p-3 rounded-xl cursor-pointer">
+            className="text-primary hover:bg-primary hover:text-secondary border border-primary p-3 rounded-xl cursor-pointer">
             Cancel
           </button>
-          <button className="bg-[#8a2b06] hover:bg-[#4d1601] text-white px-10 p-3 rounded-xl cursor-pointer">Confirm</button>
+          <button className="bg-primary hover:bg-dark-secondary text-secondary hover:text-light-secondary px-10 p-3 rounded-xl cursor-pointer">Confirm</button>
         </div>
         <OrderPlacedModal show={showOrderPlaced}/>
       </form>

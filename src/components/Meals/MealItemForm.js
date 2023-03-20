@@ -25,7 +25,7 @@ const MealItemForm = (props) => {
   return (
     <form
       onSubmit={submitHandler}
-      className="flex flex-row md:flex-col md:space-y-2 ml-4"
+      className="flex flex-row mx-auto md:flex-col md:space-y-2 ml-4"
     >
       <Input
         ref={amountInputRef}
@@ -39,7 +39,7 @@ const MealItemForm = (props) => {
           defaultValue: "1"
         }}
       />
-      <button className="cursor-pointer rounded-xl ml-4 p-2 px-4 text-white font-semibold bg-[#8a2b06] hover:bg-[#4d1601] text-center">
+      <button className="cursor-pointer rounded-xl ml-4 p-2 px-4 font-semibold bg-primary hover:bg-dark-secondary text-secondary hover:text-light-secondary text-center">
         Add to Cart
       </button>
       {!amountIsValid && <p>Please Enter a valid Amount (1-5)</p>}

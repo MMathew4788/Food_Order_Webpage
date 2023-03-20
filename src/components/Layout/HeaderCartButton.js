@@ -3,7 +3,6 @@ import { uiAction } from "../../store/ui-slice";
 import CartIcon from "../Cart/CartIcon";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
-import classes from "./HeaderCartButton.module.css";
 
 const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
@@ -15,9 +14,9 @@ const HeaderCartButton = (props) => {
     return curNumber + item.amount;
   }, 0);
 
-  const btnClasses = `${classes.button} ${btnIsHighlighted ? classes.bump : ''}`;
+  const btnClasses = `relative pointer justify-between py-2 px-8 flex text-light-secondary font-bold hover:text-secondary ${btnIsHighlighted ? 'animate-bump' : ''}`;
 
-  useEffect(() => {
+  useEffect(() => {      
     if (items.length === 0) {
       return;
     }
@@ -40,11 +39,11 @@ const HeaderCartButton = (props) => {
 
   return (
     <button className={btnClasses} onClick={openCartHandler}>
-      <div className={classes.icon}>
+      <div className="text-lg md:text-2xl">Your Cart</div>
+      <div className="h-8 w-5 ml-4">
         <CartIcon />
       </div>
-      <div className="text-2xl">Your Cart</div>
-      <span className="bg-[#b94517] py-1 px-4 rounded-xl ml-4 font-bold">{numberOfCartItems}</span>
+      <span className="relative w-6 -top-4 right-4 bg-dark-secondary py-0.5 px-1 text-sm rounded-full ml-4 font-bold">{numberOfCartItems}</span>
     </button>
   );
 };

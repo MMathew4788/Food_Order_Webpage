@@ -16,7 +16,7 @@ function App() {
 
   return (
     <CardProvider>
-      <div>
+      <div className="bg-neutral">
         {showCart && <Cart onClose={CartHandler}/>}
         <Header onShowCart={CartHandler}/>
         <main>

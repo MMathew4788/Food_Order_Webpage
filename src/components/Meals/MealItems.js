@@ -16,16 +16,16 @@ const MealItems = (props) => {
   };
 
   return (
-    <li className="flex flex-col md:flex-row justify-between border-b-2 border-slate-500">
+    <li className="flex flex-col md:flex-row justify-between border-b-2 border-primary">
       <div className="flex flex-row">
-        <div className="mt-2 w-1/2 md:w-20 md:h-20 py-4">{props.picture}</div>
-        <div className="flex flex-col justify-between m-4">
-          <div className="text-base md:text-xl font-bold">{props.name}</div>
-          <div className="text-base md:text-xl">{props.description}</div>
-          <div className="font-bold text-[#8a2b06] ">{price}</div>
+        <div className="mt-2 w-full md:w-20 md:h-20 py-4 mx-auto">{props.picture}</div>
+        <div className="flex flex-col w-full justify-between m-4">
+          <div className="text-center md:text-left md:mx-0 text text-xl font-bold">{props.name}</div>
+          <div className="text-lg mx-auto md:mx-0 text-center md:text-left">{props.description}</div>
+          <div className="font-bold text-xl text-[#8a2b06] mx-auto md:mx-0">{price}</div>
         </div>
       </div>
-      <div className="py-2">
+      <div className="py-2 mx-auto md:mx-0">
         <MealItemForm id={props.id} onAddToCart={addToCartHandler} />
       </div>
     </li>
