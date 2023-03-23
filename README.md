@@ -1,7 +1,7 @@
 # Food_Order_Webpage
 
 ## Project Description
-A Food Ordering Webapp, where you can view different dishes from different cuisines.
+Mathew's Food Ordering Webpage, where you can view different dishes from two different cuisines.
 You can add the dish in the cart, edit the cart items and finally order them.
 On submitting the cart you will be promted to a checkout form.
 
@@ -26,3 +26,7 @@ You may also see any lint errors in the console.
 ## Try it Live
 This WebApp is deployed in netlify.<br>
 To view the demo:<a href="https://stellar-llama-6e337b.netlify.app/" target="_blank"> click here</a>
+
+## Credits
+
+The images used in this webpage are from <a href="https://www.pexels.com/creative-commons-images/" target="_blank">Pexels</a>, a source of high-quality free stock photos under the Creative Commons license.
