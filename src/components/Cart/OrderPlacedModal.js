@@ -7,7 +7,7 @@ const OrderPlacedModal = (props) => {
         return null;
     }
   return (
-    <div className="fixed left-0 top-0 right-0 bottom-0 bg-black flex items-center justify-center">
+    <div className="fixed left-0 top-0 right-0 bottom-0 bg-black flex items-center justify-center px-2">
       <div className="w-96  bg-neutral p-4 text-center flex flex-col items-center justify-center rounded-2xl">
         <img src={OrderPlaced} alt='OrderPlacedImage'/>
         <div className="text-3xl font-bold">ThankYou</div>

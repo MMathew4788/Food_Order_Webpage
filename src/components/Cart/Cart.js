@@ -53,12 +53,12 @@ const Cart = (props) => {
     <div className="flex flex-row justify-between p-2">
       <button
         onClick={props.onClose}
-        className="text-primary hover:bg-primary hover:text-secondary border border-primary p-3 rounded-xl cursor-pointer"
+        className="text-primary hover:bg-primary hover:text-secondary border border-primary p-3 rounded-xl cursor-pointer font-semibold"
       >
         Close
       </button>
       {hasItems && (
-        <button onClick={orderHandler} className="bg-primary hover:bg-dark-secondary text-secondary hover:text-light-secondary px-10 p-3 rounded-xl cursor-pointer">
+        <button onClick={orderHandler} className="bg-primary hover:bg-dark-secondary text-secondary hover:text-light-secondary px-10 p-3 rounded-xl cursor-pointer font-semibold">
           Order
         </button>
       )}
