@@ -9,12 +9,13 @@ const CartItem = (props) => {
         <h2 className="font-bold">{props.name}</h2>
         <div className="space-x-10">
           <span className="text-primary font-semibold">{price}</span>
-          <span className="border px-2 py-1">x {props.amount}</span>
+          
         </div>
       </div>
       <div className="space-x-4 my-auto">
-        <button className="px-3 border border-primary rounded-lg" onClick={props.onRemove}>−</button>
-        <button className="px-3 border border-primary rounded-lg" onClick={props.onAdd}>+</button>
+        <button className="px-3 border border-primary rounded-lg text-primary" onClick={props.onRemove}>−</button>
+        <span className="px-2 py-1">{props.amount}</span>
+        <button className="px-3 border border-primary rounded-lg text-primary" onClick={props.onAdd}>+</button>
       </div>
       </div>
     </li>

@@ -30,3 +30,7 @@ To view the demo:<a href="https://stellar-llama-6e337b.netlify.app/" target="_bl
 ## Credits
 
 The images used in this webpage are from <a href="https://www.pexels.com/creative-commons-images/" target="_blank">Pexels</a>, a source of high-quality free stock photos under the Creative Commons license.
+
+## Stripe Integration
+
+To check out the Stripe integration, please switch to the "stripe" branch of the codebase.
