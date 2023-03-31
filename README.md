@@ -19,7 +19,7 @@ On submitting the cart you will be promted to a checkout form.
 ### Stripe Integration
 This project integrates Stripe for payment processing. When you submit your cart, you will be prompted to enter your payment information using the Stripe checkout form.
 
-To use the Stripe integration, you will need to add your Stripe secret API key to the `STRIPE_SECRET_KEY` environment variable in the .env file located in the server folder, and your Stripe publishable key to the `REACT_APP_STRIPE_PUBLIC_KEY` environment variable in the root directory .env file. You can obtain your Stripe API key from your Stripe account dashboard.
+To use the Stripe integration, you will need to add your Stripe secret API key to the `STRIPE_SECRET_KEY` environment variable in the .env file located in the server folder, and your Stripe publishable key to the `REACT_APP_PUBLISHABLE_KEY` environment variable in the root directory .env file. You can obtain your Stripe API key from your Stripe account dashboard.
 
 ### Runing the client side code
 - Clone the repository to your local machine using `git clone`.
