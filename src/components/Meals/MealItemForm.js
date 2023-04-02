@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import Input from "../UI/Input";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const MealItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -8,9 +10,19 @@ const MealItemForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    toast.success("Item added to cart", {
+      position: "bottom-left",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
     const enteredAmount = amountInputRef.current.value;
     const enteredAmountNumber = +enteredAmount;
-    
+
     if (
       enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
@@ -36,8 +48,20 @@ const MealItemForm = (props) => {
           min: "1",
           max: "5",
           step: "1",
-          defaultValue: "1"
+          defaultValue: "1",
         }}
+      />
+      <ToastContainer
+        position="bottom-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
       />
       <button className="cursor-pointer rounded-xl ml-4 p-2 px-4 font-semibold bg-primary hover:bg-dark-secondary text-secondary hover:text-light-secondary text-center">
         Add to Cart
